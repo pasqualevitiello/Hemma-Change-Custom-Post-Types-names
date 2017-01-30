@@ -74,3 +74,5 @@ add_filter( 'gettext', 'hemma_update_text_strings', 20, 3 );
 
 <h2>Final steps</h2>
 Now that you've saved the functions.php file and uploaded it to your server, you may get some 404 issues. That basically happens beacuse you have not resaved Permalinks, so go to <i>Settings - Permalinks</i> and hit the <i>Save Changes</i> button. Then you need to update each room post using a custom taxonomy, so navigate to <i>Villas - [Your Posts] - Edit</i> and resave them clicking on the <i>Update</i> button. And that's it... Hope you're enjoying Hemma!
+
+<h4><a href="functions.php">View sample code</a></h4>
