@@ -56,6 +56,7 @@ add_filter( 'register_taxonomy_args', 'hemma_change_taxonomies_name', 10, 2 );
 ```
 
 You can optionally update some text strings in the backend as well:
+![box](https://cloud.githubusercontent.com/assets/2683512/22422255/b9094272-e6eb-11e6-8af3-f30b34aa3e38.png)
 ```php
 function hemma_update_text_strings( $translated_text, $text, $domain ) {
    switch ( $translated_text ) {
