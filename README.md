@@ -5,16 +5,20 @@ Well, you are here because you've purchased <a href="https://themeforest.net/ite
 
 Perfect, let's get started!
 
+
 <h2>Install and activate the child theme</h2>
 This is a very important step because your changes will remain untouched during the theme updates, and you will not have to go through this lengthy process again.
 
+
 <h2>Create a functions.php inside the child theme's directory</h2>
 There you can add your custom code. Now, let's say you want to rename <strong>rooms</strong> to <strong>villas</strong>.
+
 
 First thing to do is check that "Hemma Custom Post Types" plugin is active:
 ```php
 if( class_exists( 'Hemma_Custom_Post_Types' ) ) {
 ```
+
 
 Change "Room/Rooms" to "Villa/Villas" in CPTs
 ```php
@@ -42,6 +46,7 @@ function hemma_change_post_types_name( $args, $post_type ) {
 add_filter( 'register_post_type_args', 'hemma_change_post_types_name', 10, 2 );
 ```
 
+
 Change "Room/Rooms" to "Villa/Villas" taxonomy names
 ```php
 function hemma_change_taxonomies_name( $args, $taxonomy ) {
@@ -54,6 +59,7 @@ function hemma_change_taxonomies_name( $args, $taxonomy ) {
 }
 add_filter( 'register_taxonomy_args', 'hemma_change_taxonomies_name', 10, 2 );
 ```
+
 
 You can optionally update some text strings in the backend as well:
 ![box](https://cloud.githubusercontent.com/assets/2683512/22422255/b9094272-e6eb-11e6-8af3-f30b34aa3e38.png)
@@ -72,6 +78,7 @@ function hemma_update_text_strings( $translated_text, $text, $domain ) {
 }
 add_filter( 'gettext', 'hemma_update_text_strings', 20, 3 ); 
 ```
+
 
 <h2>Final steps</h2>
 Now that you've saved the functions.php file and uploaded it to your server, you may get some 404 issues. That basically happens beacuse you have not resaved Permalinks, so go to <i>Settings - Permalinks</i> and hit the <i>Save Changes</i> button. Then you need to update each room post using a custom taxonomy, so navigate to <i>Villas - [Your Posts] - Edit</i> and resave them clicking on the <i>Update</i> button. And that's it... Hope you're enjoying Hemma!
