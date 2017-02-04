@@ -1,15 +1,14 @@
 <?php
 /*
- * Change Hemma Custom Post Types names [Example]
- * Activate the child theme, create a new file called functions.php and put some code as below in.
- * Rember that you may need to resave permalinks to fix 404 issues 
- */
-
-/*
  * Check if "Hemma Custom Post Types" plugin is active
  */
 if( class_exists( 'Hemma_Custom_Post_Types' ) ) {
 
+  /*
+   * Change Hemma Custom Post Types names [Example]
+   * Activate the child theme, create a new file called functions.php and put some code as below in.
+   * Rember that you may need to resave permalinks to fix 404 issues 
+   */
 	function hemma_change_post_types_name( $args, $post_type ) {
 
 		/*
@@ -200,5 +199,4 @@ if( class_exists( 'Hemma_Custom_Post_Types' ) ) {
 		return $translated_text;
 	}
 	add_filter( 'gettext', 'hemma_update_text_strings', 20, 3 ); 
-   
 }
