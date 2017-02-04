@@ -100,8 +100,8 @@ if( class_exists( 'Hemma_Custom_Post_Types' ) ) {
 		}
 
 		return $args;
-  	}
-  	add_filter( 'register_post_type_args', 'hemma_change_post_types_name', 10, 2 );
+  }
+  add_filter( 'register_post_type_args', 'hemma_change_post_types_name', 10, 2 );
 
 	/*
 	* Change Hemma Custom Post Types -> Taxonomy name [Example]
